@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(35, 138, 228);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container {
+    margin-top: px;
+    border: 10px solid white;
+    border-radius: 4%;
+    background-color: yellowgreen;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.countdown {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+}
+
+button {
+    margin-top: 2px;
+    background-color: #ff6f61; 
+    color: white;
+    border: none; 
+    border-radius: 25px; 
+    padding: 15px 30px; 
+    font-size: 18px;
+    font-weight: bold; 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4c39;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+button:active {
+    background-color: #ff3a27;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.zoom-animation {
+    animation: zoomInOut 2s infinite;
+}
+.balloons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: floatUp 6s ease-in infinite;
+}
+
+#balloon1 {
+    left: 10%;
+    animation-duration: 7s;
+    background-color: pink;
+}
+
+#balloon2 {
+    left: 50%;
+    animation-duration: 8s;
+    background-color: yellow;
+}
+
+#balloon3 {
+    left: 80%;
+    animation-duration: 6s;
+    background-color: lightblue;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.poppers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.popper {
+    width: 10px;
+    height: 10px;
+    background-color: gold;
+    border-radius: 50%;
+    position: absolute;
+    animation: popperAnimation 2s ease-out infinite;
+}
+
+#popper1 {
+    animation-delay: 0s;
+}
+
+#popper2 {
+    animation-delay: 1s;
+}
+
+@keyframes popperAnimation {
+    0% {
+        transform: scale(1) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) translateY(-200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.birthday-gif {
+    width: 200px; 
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+    button {
+        font-size: 1.3rem;
+    }
+    * {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 700px) {
+    button {
+        font-size: 1.6rem;
+    }
+    * {
+        font-size: 1.6rem;
+    }
+}
+.input-form {
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+#date-input {
+    font-size: 1rem; 
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+}

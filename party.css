@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffcccb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: background-change 10s infinite;
+}
+
+@keyframes background-change {
+    0% { background-color: #ffcccb; }
+    25% { background-color: #ff8a80; }
+    50% { background-color: #ff80ab; }
+    75% { background-color: #ea80fc; }
+    100% { background-color: #b388ff; }
+}
+
+#party-container {
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    z-index: 10;
+}
+
+#party-message {
+    font-size: 3rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.party-content {
+    margin-bottom: 20px;
+}
+
+.party-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10%;
+    margin: 10px 0;
+}
+
+.party-description {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.party-balloons .balloon {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+#balloon1 {
+    top: 80%;
+    left: 10%;
+    background-color: #ffa726;
+}
+
+#balloon2 {
+    top: 85%;
+    left: 50%;
+    background-color: #ffeb3b;
+}
+
+#balloon3 {
+    top: 90%;
+    left: 80%;
+    background-color: #42a5f5;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-500px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-600px);
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(600px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(500px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.party-confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('https://example.com/confetti.png');
+    background-repeat: repeat;
+    animation: confetti-fall 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes confetti-fall {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+.party-footer {
+    margin-top: 20px;
+}
+
+.back-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.back-button:hover {
+    background-color: #ff8a65;
+}

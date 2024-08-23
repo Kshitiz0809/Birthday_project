@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="input-form">
+            <label for="date-input">Enter your countdown date and time:</label>
+            <input type="datetime-local" id="date-input">
+            <button onclick="startCountdown()">Start Countdown</button>
+        </div>
+<br/>
+    <div id="container">
+        
+        <div class="countdown">
+            <p id="countdown-timer" class="zoom-animation">Please enter a date.</p>
+        </div>
+        <div class="gifs-section">
+            <img src="https://media.tenor.com/5BYK-WS0__gAAAAM/cool-fun.gif" alt="Happy Birthday GIF 1" class="birthday-gif">
+        </div>
+        <div>
+            <a href="./party.html"><button>Start the party</button></a>
+        </div>
+        <div class="balloons">
+            <div class="balloon" id="balloon1"></div>
+            <div class="balloon" id="balloon2"></div>
+            <div class="balloon" id="balloon3"></div>
+        </div>
+        <div class="poppers">
+            <div class="popper" id="popper1"></div>
+            <div class="popper" id="popper2"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
